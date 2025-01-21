@@ -41,19 +41,23 @@ const ContactScreen = () => {
           </Text>
           <form onSubmit={sendEmail}>
             <Stack gap={4}>
-              <Field label="Full Name">
+              <Field label="Full Name" required>
                 <Input name="name" placeholder="Thomas Jefferson" />
               </Field>
 
-              <Field label="Email">
-                <Input name="email" placeholder="example@gmail.com" />
+              <Field label="Email" required>
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="example@gmail.com"
+                />
               </Field>
 
-              <Field label="Subject">
+              <Field label="Subject" required>
                 <Input name="subject" placeholder="Subject here" />
               </Field>
 
-              <Field label="Message">
+              <Field label="Message" required>
                 <Textarea
                   placeholder="Type your message here..."
                   h={"200px"}
